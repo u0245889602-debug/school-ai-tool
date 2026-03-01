@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <title>School AI Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welkom op mijn website!</h1>
-    <p>Dit is mijn eerste Vercel project.</p>
 
-    <script src="script.js"></script>
+<header class="hero">
+    <h1>School AI Tool</h1>
+    <p>Een moderne, snelle en slimme webapp.</p>
+    <button id="scrollToTool">Probeer het nu</button>
+</header>
+
+<section class="features">
+    <div class="feature">⚡ Snel resultaat</div>
+    <div class="feature">🎨 Modern design</div>
+    <div class="feature">🤖 AI‑kracht</div>
+</section>
+
+<section class="tool" id="tool">
+    <h2>AI Generator</h2>
+    <textarea id="input" placeholder="Typ hier je vraag..."></textarea>
+    <button id="send">Verstuur</button>
+    <pre id="output"></pre>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
