@@ -1,18 +1,29 @@
-document.getElementById("scrollToTool").onclick = () => {
-    document.getElementById("tool").scrollIntoView({ behavior: "smooth" });
-};
+// Simpele Cart Logica
+let cartCount = 0;
+const cartBtn = document.getElementById('cart-btn');
 
-document.getElementById("send").onclick = async () => {
-    const input = document.getElementById("input").value;
-    const output = document.getElementById("output");
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        cartCount++;
+        cartBtn.innerText = `Cart (${cartCount})`;
+        
+        // Animatie feedback
+        button.innerText = "Added!";
+        button.style.background = "#34c759"; // Apple Success Green
+        
+        setTimeout(() => {
+            button.innerText = "Add to Bag";
+            button.style.background = "";
+        }, 2000);
+    });
+});
 
-    output.textContent = "Laden...";
-
-    try {
-        const res = await fetch("/api/ai?text=" + encodeURIComponent(input));
-        const data = await res.json();
-        output.textContent = data.result;
-    } catch (err) {
-        output.textContent = "Er ging iets mis.";
+// Scroll Reveal Effect
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.borderBottom = "1px solid #e5e5e5";
+    } else {
+        navbar.style.borderBottom = "none";
     }
-};
+});
