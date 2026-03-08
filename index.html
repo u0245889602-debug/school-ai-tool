@@ -2,30 +2,40 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>School AI Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital & Goods | Premium Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">D&G</div>
+        <ul class="nav-links">
+            <li><a href="#digital">Digital</a></li>
+            <li><a href="#physical">Merch</a></li>
+            <li><a href="#cart" id="cart-btn">Cart (0)</a></li>
+        </ul>
+    </nav>
 
-<header class="hero">
-    <h1>School AI Tool</h1>
-    <p>Een moderne, snelle en slimme webapp.</p>
-    <button id="scrollToTool">Probeer het nu</button>
-</header>
+    <header class="hero">
+        <h1 class="reveal-text">Elevate your space.</h1>
+        <p>Premium AI-wallpapers & curated print-on-demand essentials.</p>
+        <div class="cta-group">
+            <a href="#digital" class="btn-primary">Shop Digital</a>
+            <a href="#physical" class="btn-secondary">Explore Merch</a>
+        </div>
+    </header>
 
-<section class="features">
-    <div class="feature">⚡ Snel resultaat</div>
-    <div class="feature">🎨 Modern design</div>
-    <div class="feature">🤖 AI‑kracht</div>
-</section>
+    <section id="digital" class="product-grid">
+        <div class="product-card" data-price="15">
+            <div class="product-image glass">
+                <span class="badge">Digital</span>
+            </div>
+            <h3>8K AI Wallpaper Pack</h3>
+            <p>€15.00</p>
+            <button class="add-to-cart">Add to Bag</button>
+        </div>
+        </section>
 
-<section class="tool" id="tool">
-    <h2>AI Generator</h2>
-    <textarea id="input" placeholder="Typ hier je vraag..."></textarea>
-    <button id="send">Verstuur</button>
-    <pre id="output"></pre>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
